@@ -4,14 +4,15 @@ int main() {
 	int n;
 	printf("enter a number : ");
 	scanf("%d",&n);
-	int cnt = 1;
+	int cnt = 0;
 	while(n>0) {
-		sum += n;
 		cnt++;
+		sum += n;
 		printf("enter a number : ");
 		scanf("%d",&n);
 	}
+	float avg = (cnt > 0) ? (float)sum/cnt : 0;
 	printf("summation = %d\n", sum);
-	printf("average = %.2f\n", (float)sum/cnt);
+	printf("average = %.2f\n", avg);
 	return 0;
 }
